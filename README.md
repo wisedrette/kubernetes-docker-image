@@ -1,1 +1,0 @@
-# kubernetes-docker-image
