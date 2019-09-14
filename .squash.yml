@@ -2,10 +2,11 @@ deployments:
   ghost:
     deployment_type: kubernetes
     install: 
-      - kubectl apply -f https://k8s.io/examples/application/guestbook/redis-master-deployment.yaml
-      - kubectl apply -f https://k8s.io/examples/application/guestbook/redis-master-service.yaml
-      - kubectl apply -f https://k8s.io/examples/application/guestbook/redis-slave-deployment.yaml
-      - kubectl apply -f https://k8s.io/examples/application/guestbook/redis-slave-service.yaml
-      - kubectl apply -f https://k8s.io/examples/application/guestbook/frontend-deployment.yaml
-      - kubectl apply -f https://k8s.io/examples/application/guestbook/frontend-service.yaml
-      - kubectl port-forward svc/frontend 80:80 --address 0.0.0.0
+      - sudo kubectl apply -f https://k8s.io/examples/application/guestbook/redis-master-deployment.yaml
+      - sudo kubectl apply -f https://k8s.io/examples/application/guestbook/redis-master-service.yaml
+      - sudo kubectl apply -f https://k8s.io/examples/application/guestbook/redis-slave-deployment.yaml
+      - sudo kubectl apply -f https://k8s.io/examples/application/guestbook/redis-slave-service.yaml
+      - sudo kubectl apply -f https://k8s.io/examples/application/guestbook/frontend-deployment.yaml
+      - sudo kubectl apply -f https://k8s.io/examples/application/guestbook/frontend-service.yaml
+      - sleep 20
+      - sudo kubectl port-forward svc/frontend 80:80 --address 0.0.0.0 &
