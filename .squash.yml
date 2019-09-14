@@ -1,5 +1,6 @@
 deployments:
   ghost:
+    deployment_type: kubernetes
     install: 
       - kubectl apply -f https://k8s.io/examples/application/guestbook/redis-master-deployment.yaml
       - kubectl apply -f https://k8s.io/examples/application/guestbook/redis-master-service.yaml
